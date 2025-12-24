@@ -7,10 +7,11 @@ let secretNumber = 0;
 let attemptCount = 0;
 
 // ฟังก์ชันเริ่มเกมใหม่
-function initializeGame() {
-  secretNumber = Math.floor(Math.random() * 100) + 1;
-  attemptCount = 0;
-  updateDisplay();
+function resetGame() {
+  initializeGame();
+  document.getElementById("resultContainer").innerHTML = "";
+  document.getElementById("guessInput").value = "";
+  document.getElementById("guessInput").focus();
 }
 
 // ฟังก์ชันตรวจสอบการทาย
